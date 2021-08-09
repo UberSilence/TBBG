@@ -30,7 +30,3 @@ Run the executable file that it creates after *make*.
 ```bash
 .\game.exe
 ```
-
-## Known bugs
-
-* Sometimes the game is unbalanced.
