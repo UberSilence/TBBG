@@ -50,6 +50,7 @@ void buyWeapon(Player *player) {
             buyWeapon(player);
         }
     } else {
+        clearScreen();
         std::cout << "Invalid choice.\n";
         buyWeapon(player);
     }
