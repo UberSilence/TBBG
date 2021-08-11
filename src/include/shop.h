@@ -3,5 +3,6 @@
 
 void shop(Player *player);
 void buyWeapon(Player *player);
+void buyShield(Player *player);
 
 #endif

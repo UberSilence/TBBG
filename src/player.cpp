@@ -9,9 +9,13 @@ Player::Player(std::string _name) {
     weaponName = "Fists";
     weaponDamageLow = 20;
     weaponDamageHigh = 30;
+    shieldName = "No Shield";
+    shieldProtectLow = 0;
+    shieldProtectHigh = 0;
     rank = "Beginner";
 }
 
+// money management
 int Player::getMoney() {
     return money;
 }
@@ -109,4 +113,28 @@ void Player::setWeaponDamageHigh(int damage) {
 
 void Player::setWeaponDamageLow(int damage) {
     weaponDamageLow = damage;
+}
+
+void Player::setShield(std::string _shieldName) {
+    shieldName = _shieldName;
+}
+
+void Player::setShieldProtectLow(int protect) {
+    shieldProtectLow = protect;
+}
+
+void Player::setShieldProtectHigh(int protect) {
+    shieldProtectHigh = protect;
+}
+
+std::string Player::getShieldName() {
+    return shieldName;
+}
+
+int Player::getShieldProtectLow() {
+    return shieldProtectLow;
+}
+
+int Player::getShieldProtectHigh() {
+    return shieldProtectHigh;
 }

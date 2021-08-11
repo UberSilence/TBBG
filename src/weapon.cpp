@@ -27,6 +27,6 @@ int Weapon::getDamageHigh(int id) {
     return weapons[id].damageHigh;
 }
 
-int Weapon::getWeaponCount() {
+int Weapon::getCount() {
     return weapons.size();
 }

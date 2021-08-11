@@ -16,7 +16,7 @@ class Weapon {
         int getPrice(int id);
         int getDamageLow(int id);
         int getDamageHigh(int id);
-        int getWeaponCount();
+        int getCount();
 };
 
 #endif

@@ -1,5 +1,5 @@
-game: main.o menu.o utils.o game.o shop.o player.o weapons.o
-	g++ main.o menu.o utils.o game.o shop.o player.o weapons.o -o game
+game: main.o menu.o utils.o game.o shop.o player.o weapon.o shield.o
+	g++ main.o menu.o utils.o game.o shop.o player.o weapon.o shield.o -o game
 
 main.o: src/main.cpp
 	g++ -Wall -c src/main.cpp
@@ -19,8 +19,11 @@ shop.o: src/shop.cpp src/include/shop.h
 player.o: src/player.cpp src/include/player.h
 	g++ -Wall -c src/player.cpp
 
-weapons.o: src/weapons.cpp src/include/weapon.h src/include/weapons.h
-	g++ -Wall -c src/weapons.cpp
+weapon.o: src/weapon.cpp src/include/weapon.h src/include/weapons.h
+	g++ -Wall -c src/weapon.cpp
+
+shield.o: src/shield.cpp src/include/shield.h src/include/shields.h
+	g++ -Wall -c src/shield.cpp
 
 clean:
 	del *.o

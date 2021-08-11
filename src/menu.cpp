@@ -11,6 +11,7 @@ void playerStats(Player *player) {
     std::cout << "* Level: " << player->getLevel() << std::endl;
     std::cout << "* Rank: " << player->getRank() << std::endl;
     std::cout << "* Weapon: " << player->getWeaponName() << std::endl;
+    std::cout << "* Shield: " << player->getShieldName() << std::endl;
     std::cout << "* Bag: " << player->getMoney() << " coins" << std::endl;
     std::cout << "########################################\n\n";
     menu(player);

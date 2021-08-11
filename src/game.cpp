@@ -116,9 +116,10 @@ void Game::newGame(Player *player) {
         }
         else if (monsterTurn == true) {
             clearScreen();
-            random = random_number(player->getLevel()*20, (player->getLevel()*20)+10);
-            std::cout << "The Monster attacked you, dealing " << random << " damage.\n";
-            playerHealth = playerHealth - random;
+            random = (random_number(player->getLevel()*20, (player->getLevel()*20)+10));
+            int protect = (random_number(player->getShieldProtectLow(), player->getShieldProtectHigh()));
+            std::cout << "The Monster attacked you, dealing " << random-protect << " damage.\nYour shield protects you for " << protect << " damage.\n";
+            playerHealth = playerHealth - (random-protect);
             playerTurn = true;
             monsterTurn = false;
             health();
