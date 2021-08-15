@@ -34,7 +34,10 @@ void buyWeapon(Player *player) {
     for(int i = 0; i < weapon.getCount(); i++) {
         std::cout << "# " << i+1 << ". " << weapon.getName(i) << " - " << weapon.getPrice(i) << " coins - " << weapon.getDamageLow(i) << "-" << weapon.getDamageHigh(i) << " damage\n";
     }
-    std::cout << "#\n###################################################\n";
+    std::cout << "#\n###################################################\n\n";
+    std::cout << "Bag: " << player->getMoney() << " coins.\n";
+    std::cout << "Current weapon: " << player->getWeaponName() << "\n";
+    std::cout << "Current damage: " << player->getWeaponDamageLow() << "-" << player->getWeaponDamageHigh() << "\n";
 
     std::cout << "\nWhat would you like to buy?\nChoice (0 to exit): ";
     std::cin >> choice;
@@ -72,6 +75,9 @@ void buyShield(Player *player) {
         std::cout << "# " << i+1 << ". " << shield.getName(i) << " - " << shield.getPrice(i) << " coins - " << shield.getProtectLow(i) << "-" << shield.getProtectHigh(i) << " protection\n";
     }
     std::cout << "#\n###################################################\n";
+    std::cout << "Bag: " << player->getMoney() << " coins.\n";
+    std::cout << "Current shield: " << player->getShieldName() << "\n";
+    std::cout << "Current protection: " << player->getShieldProtectLow() << "-" << player->getShieldProtectHigh() << "\n";
 
     std::cout << "\nWhat would you like to buy?\nChoice (0 to exit): ";
     std::cin >> choice;
